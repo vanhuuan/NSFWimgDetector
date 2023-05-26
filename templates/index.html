@@ -43,7 +43,11 @@
           fetch(url, fetchOptions).then(response => response.json())
               .then(response => {
                   console.log(response.status)
-                  alert(response.status)
+                  if(response.status === "Oke"){
+                      alert("Ảnh phù hợp")
+                  }else {
+                      alert("Ảnh chưa phù hợp")
+                  }
               })
               .catch((err) => {
                   alea(err)
