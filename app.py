@@ -7,7 +7,9 @@ from keras.models import load_model
 
 app = Flask(__name__)
 CORS(app)
-model = load_model('model31052023.h5')
+# model = load_model('model31052023.h5')
+# model = load_model('model12062023_128.h5')
+model = load_model('model22062023_128.h5')
 
 
 @app.route('/checkImg', methods=['POST'])
