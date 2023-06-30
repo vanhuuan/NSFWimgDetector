@@ -24,7 +24,7 @@ def mask_image():
         arr = np.asarray([arr], dtype=np.uint8)
         predict = model.predict(arr)
         # nsfw = np.argmax(predict, axis=1)
-        nsfw = np.where(predict[:, 1] > 0.3, 1)
+        nsfw = np.where(predict[:, 1] > 0.3, 1, 0)
         print(nsfw)
         if nsfw == 1:
             return jsonify({'status': "Oke"})
